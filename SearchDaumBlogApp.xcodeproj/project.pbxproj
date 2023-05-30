@@ -21,6 +21,7 @@
 		DA5289922A25D1DD001156D7 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5289912A25D1DD001156D7 /* FilterView.swift */; };
 		DA5289942A25D2A6001156D7 /* BlogListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5289932A25D2A6001156D7 /* BlogListView.swift */; };
 		DA5289962A25D307001156D7 /* BlogListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5289952A25D307001156D7 /* BlogListCell.swift */; };
+		DA52899A2A25D38D001156D7 /* BlogListCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5289992A25D38D001156D7 /* BlogListCellData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		DA5289912A25D1DD001156D7 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		DA5289932A25D2A6001156D7 /* BlogListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogListView.swift; sourceTree = "<group>"; };
 		DA5289952A25D307001156D7 /* BlogListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogListCell.swift; sourceTree = "<group>"; };
+		DA5289992A25D38D001156D7 /* BlogListCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogListCellData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +79,8 @@
 				DA5289752A25C6C1001156D7 /* Assets.xcassets */,
 				DA5289772A25C6C1001156D7 /* LaunchScreen.storyboard */,
 				DA52897A2A25C6C1001156D7 /* Info.plist */,
-				DA5289972A25D32D001156D7 /* Presentation */,
 				DA5289982A25D347001156D7 /* Entities */,
+				DA5289972A25D32D001156D7 /* Presentation */,
 			);
 			path = SearchDaumBlogApp;
 			sourceTree = "<group>";
@@ -98,6 +100,7 @@
 		DA5289982A25D347001156D7 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				DA5289992A25D38D001156D7 /* BlogListCellData.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				DA5289922A25D1DD001156D7 /* FilterView.swift in Sources */,
 				DA5289942A25D2A6001156D7 /* BlogListView.swift in Sources */,
 				DA52896F2A25C6C0001156D7 /* SceneDelegate.swift in Sources */,
+				DA52899A2A25D38D001156D7 /* BlogListCellData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
