@@ -13,6 +13,11 @@
 		DA5289742A25C6C0001156D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA5289722A25C6C0001156D7 /* Main.storyboard */; };
 		DA5289762A25C6C1001156D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA5289752A25C6C1001156D7 /* Assets.xcassets */; };
 		DA5289792A25C6C1001156D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA5289772A25C6C1001156D7 /* LaunchScreen.storyboard */; };
+		DA5289822A25C818001156D7 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = DA5289812A25C818001156D7 /* RxCocoa */; };
+		DA5289842A25C818001156D7 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = DA5289832A25C818001156D7 /* RxRelay */; };
+		DA5289862A25C818001156D7 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DA5289852A25C818001156D7 /* RxSwift */; };
+		DA5289892A25C852001156D7 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DA5289882A25C852001156D7 /* Kingfisher */; };
+		DA52898C2A25C866001156D7 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DA52898B2A25C866001156D7 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +36,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA5289892A25C852001156D7 /* Kingfisher in Frameworks */,
+				DA5289862A25C818001156D7 /* RxSwift in Frameworks */,
+				DA5289842A25C818001156D7 /* RxRelay in Frameworks */,
+				DA5289822A25C818001156D7 /* RxCocoa in Frameworks */,
+				DA52898C2A25C866001156D7 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +93,13 @@
 			dependencies = (
 			);
 			name = SearchDaumBlogApp;
+			packageProductDependencies = (
+				DA5289812A25C818001156D7 /* RxCocoa */,
+				DA5289832A25C818001156D7 /* RxRelay */,
+				DA5289852A25C818001156D7 /* RxSwift */,
+				DA5289882A25C852001156D7 /* Kingfisher */,
+				DA52898B2A25C866001156D7 /* SnapKit */,
+			);
 			productName = SearchDaumBlogApp;
 			productReference = DA5289692A25C6C0001156D7 /* SearchDaumBlogApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +128,11 @@
 				Base,
 			);
 			mainGroup = DA5289602A25C6C0001156D7;
+			packageReferences = (
+				DA5289802A25C818001156D7 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				DA5289872A25C852001156D7 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				DA52898A2A25C866001156D7 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = DA52896A2A25C6C0001156D7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -295,6 +317,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,6 +346,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -358,6 +382,61 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DA5289802A25C818001156D7 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		DA5289872A25C852001156D7 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		DA52898A2A25C866001156D7 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DA5289812A25C818001156D7 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA5289802A25C818001156D7 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		DA5289832A25C818001156D7 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA5289802A25C818001156D7 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		DA5289852A25C818001156D7 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA5289802A25C818001156D7 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		DA5289882A25C852001156D7 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA5289872A25C852001156D7 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		DA52898B2A25C866001156D7 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA52898A2A25C866001156D7 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DA5289612A25C6C0001156D7 /* Project object */;
 }
