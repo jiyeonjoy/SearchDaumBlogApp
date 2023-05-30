@@ -43,7 +43,7 @@ class SearchBlogNetwork {
         
         let request = NSMutableURLRequest(url: url)
         request.httpMethod = "GET"
-        request.setValue("KakaoAK 4e78ea35cffb481201121cd3d09455a6", forHTTPHeaderField: "Authorization") // 헤더 추가
+        request.setValue("KakaoAK .......set your token", forHTTPHeaderField: "Authorization") // 헤더 추가
         
         return session.rx.data(request: request as URLRequest)
             .map { data in
