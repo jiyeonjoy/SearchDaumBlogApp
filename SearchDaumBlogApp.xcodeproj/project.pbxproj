@@ -22,6 +22,7 @@
 		DA5289942A25D2A6001156D7 /* BlogListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5289932A25D2A6001156D7 /* BlogListView.swift */; };
 		DA5289962A25D307001156D7 /* BlogListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5289952A25D307001156D7 /* BlogListCell.swift */; };
 		DA52899A2A25D38D001156D7 /* BlogListCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5289992A25D38D001156D7 /* BlogListCellData.swift */; };
+		DA52899E2A25D865001156D7 /* AlertActionConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA52899D2A25D865001156D7 /* AlertActionConvertible.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		DA5289932A25D2A6001156D7 /* BlogListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogListView.swift; sourceTree = "<group>"; };
 		DA5289952A25D307001156D7 /* BlogListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogListCell.swift; sourceTree = "<group>"; };
 		DA5289992A25D38D001156D7 /* BlogListCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogListCellData.swift; sourceTree = "<group>"; };
+		DA52899D2A25D865001156D7 /* AlertActionConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertActionConvertible.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				DA5289992A25D38D001156D7 /* BlogListCellData.swift */,
+				DA52899D2A25D865001156D7 /* AlertActionConvertible.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				DA5289942A25D2A6001156D7 /* BlogListView.swift in Sources */,
 				DA52896F2A25C6C0001156D7 /* SceneDelegate.swift in Sources */,
 				DA52899A2A25D38D001156D7 /* BlogListCellData.swift in Sources */,
+				DA52899E2A25D865001156D7 /* AlertActionConvertible.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
