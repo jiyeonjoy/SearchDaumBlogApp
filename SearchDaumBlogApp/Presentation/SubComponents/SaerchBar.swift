@@ -12,19 +12,11 @@ import SnapKit
 
 class SearchBar: UISearchBar {
     let disposeBag = DisposeBag()
-    
     let searchButton = UIButton()
-    
-    // SearchBar 내부의 이벤트
-    let searchButtonTapped = PublishRelay<Void>() // onNext만 있음 onError 불필요!!
-    
-    // SearchBar 외부로 내보낼 이벤트
-    var shouldLoadResult = Observable<String>.of("")
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        bind()
         attribute()
         layout()
     }
@@ -33,24 +25,23 @@ class SearchBar: UISearchBar {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func bind() {
+    func bind(_ viewModel: SearchBarViewMode) {
+        self.rx.text
+            .bind(to: viewModel.queryText)
+            .disposed(by: disposeBag)
+
         Observable
             .merge( // 순서 랜덤!! 다음 옵저버에서 이벤트 발생 시 둘 다 받음.
                 self.rx.searchButtonClicked.asObservable(),
                 searchButton.rx.tap.asObservable()
             )
-            .bind(to: searchButtonTapped)
+            .bind(to: viewModel.searchButtonTapped)
             .disposed(by: disposeBag)
         
-        searchButtonTapped
+        viewModel.searchButtonTapped
             .asSignal()
             .emit(to: self.rx.endEditing) // 키보드 내려가는 이벤트 extension!
             .disposed(by: disposeBag)
-        
-        self.shouldLoadResult = searchButtonTapped
-            .withLatestFrom(self.rx.text) { $1 ?? "" } // 가장 최근의 값이 보내진다.
-            .filter { !$0.isEmpty }
-            .distinctUntilChanged() // 한번 보내지고 나서 중복으로 보내지 않는다.
     }
     
     private func attribute() {

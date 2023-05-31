@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		905B55B72A27572E00FBDF66 /* SearchBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905B55B62A27572E00FBDF66 /* SearchBarViewModel.swift */; };
 		DA52896D2A25C6C0001156D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA52896C2A25C6C0001156D7 /* AppDelegate.swift */; };
 		DA52896F2A25C6C0001156D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA52896E2A25C6C0001156D7 /* SceneDelegate.swift */; };
 		DA5289762A25C6C1001156D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA5289752A25C6C1001156D7 /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		905B55B62A27572E00FBDF66 /* SearchBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarViewModel.swift; sourceTree = "<group>"; };
 		DA5289692A25C6C0001156D7 /* SearchDaumBlogApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchDaumBlogApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA52896C2A25C6C0001156D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA52896E2A25C6C0001156D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				DA52898F2A25CC78001156D7 /* SaerchBar.swift */,
+				905B55B62A27572E00FBDF66 /* SearchBarViewModel.swift */,
 				DA5289912A25D1DD001156D7 /* FilterView.swift */,
 				DA52899C2A25D797001156D7 /* ListView */,
 			);
@@ -233,6 +236,7 @@
 				DA5289942A25D2A6001156D7 /* BlogListView.swift in Sources */,
 				DA52896F2A25C6C0001156D7 /* SceneDelegate.swift in Sources */,
 				DA52899A2A25D38D001156D7 /* BlogListCellData.swift in Sources */,
+				905B55B72A27572E00FBDF66 /* SearchBarViewModel.swift in Sources */,
 				DA5289A32A25DD61001156D7 /* SearchBlogNetwork.swift in Sources */,
 				DA52899E2A25D865001156D7 /* AlertActionConvertible.swift in Sources */,
 			);
