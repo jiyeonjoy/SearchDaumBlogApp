@@ -18,49 +18,22 @@ struct MainViewModel {
     let alertActionTapped = PublishRelay<MainViewController.AlertAction>()
     let shouldPresentAlert: Signal<MainViewController.Alert>
     
-    init() {
+    init(model: MainModel = MainModel()) {
         let blogResult = searchBarViewModel.shouldLoadResult
-            .flatMapLatest {
-                SearchBlogNetwork().searchBlog(query: $0)
-            }
+            .flatMapLatest(model.searchBlog)
             .share()
         
         let blogValue = blogResult
-            .map { data -> DKBlog? in
-                guard case .success(let value) = data else {
-                    return nil
-                }
-                return value
-            }
-            .filter { $0 != nil }
+            .compactMap(model.getBlogValue)
+//            .map(model.getBlogValue)
+//            .filter { $0 != nil }
         
         let blogError = blogResult
-            .map { data -> String? in
-                guard case .failure(let error) = data else {
-                    return nil
-                }
-                return error.message
-            }
-            .filter { $0 != nil }
+            .compactMap(model.getBlogError)
         
         // 네트워크를 통해 가져온 값을 CellData로 변환
         let cellData = blogValue
-            .map { blog -> [BlogListCellData] in
-                guard let blog = blog else {
-                    return []
-                }
-                
-                return blog.documents
-                    .map {
-                        let thumbnailURL = URL(string: $0.thumbnail ?? "")
-                        return BlogListCellData(
-                            thumbnailURL: thumbnailURL,
-                            name: $0.name,
-                            title: $0.title,
-                            datetime: $0.datetime
-                        )
-                    }
-            }
+            .map(model.getBlogListCellData)
         
         // FilterView를 선택했을 때 나오는 alertsheet를 선택했을 때 type
         let sortedType = alertActionTapped
@@ -76,19 +49,11 @@ struct MainViewModel {
         
         // MainViewController -> ListView
         Observable
-            .combineLatest( // 두개를 결합해서 모두 최신것을 보여줌.
+            .combineLatest(
                 sortedType,
-                cellData
-            ) { type, data -> [BlogListCellData] in
-                switch type {
-                case .title:
-                    return data.sorted { $0.title ?? "" < $1.title ?? "" }
-                case .datetime:
-                    return data.sorted { $0.datetime ?? Date() > $1.datetime ?? Date() }
-                case .cancel, .confirm:
-                    return data
-                }
-            }
+                cellData,
+                resultSelector: model.sort
+            )
             .bind(to: blogListViewModel.blogListCellData)
             .disposed(by: disposeBag)
         
@@ -99,7 +64,7 @@ struct MainViewModel {
         
         let alertForErrorMessage = blogError
             .do(onNext: { message in
-                print("error: \(message ?? "")")
+                print("error: \(message)")
             })
                 .map { _ -> MainViewController.Alert in
                 return (
