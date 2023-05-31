@@ -30,6 +30,8 @@ class BlogListView: UITableView {
     }
     
     func bind(_ viewModel: BlogListViewModel) {
+        headerView.bind(viewModel.filterViewModel)
+        
         viewModel.cellData
         // bind와 같이 에러나도 에러 방출 안함. 유아이 변경해서 메인스레드에서 일어남. bind와 다른점은 스트림 공유가 가능하다.
         // 비슷한 걸로 signal 이 있는데 driver는 구독전 바로 최신값 받지만 signal은 구독 이후 값만 받는다!!

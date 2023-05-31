@@ -89,6 +89,15 @@
 			path = FilterView;
 			sourceTree = "<group>";
 		};
+		905B55C02A2762B400FBDF66 /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DA52898D2A25C946001156D7 /* MainViewController.swift */,
+				905B55BE2A27626100FBDF66 /* MainViewModel.swift */,
+			);
+			path = MainViewController;
+			sourceTree = "<group>";
+		};
 		DA5289602A25C6C0001156D7 = {
 			isa = PBXGroup;
 			children = (
@@ -123,8 +132,7 @@
 		DA5289972A25D32D001156D7 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				DA52898D2A25C946001156D7 /* MainViewController.swift */,
-				905B55BE2A27626100FBDF66 /* MainViewModel.swift */,
+				905B55C02A2762B400FBDF66 /* MainViewController */,
 				DA52899B2A25D763001156D7 /* SubComponents */,
 			);
 			path = Presentation;

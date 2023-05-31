@@ -25,7 +25,7 @@ class SearchBar: UISearchBar {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func bind(_ viewModel: SearchBarViewMode) {
+    func bind(_ viewModel: SearchBarViewModel) {
         self.rx.text
             .bind(to: viewModel.queryText)
             .disposed(by: disposeBag)

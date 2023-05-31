@@ -8,7 +8,7 @@
 import RxSwift
 import RxCocoa
 
-struct SearchBarViewMode {
+struct SearchBarViewModel {
     let queryText = PublishRelay<String?>()
     // SearchBar 내부의 이벤트
     let searchButtonTapped = PublishRelay<Void>() // onNext만 있음 onError 불필요!!
